@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <script src="../node_modules/feather-icons/dist/feather.min.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <title>A better JOYA</title>
+</head>
+
+<body class="text-gray-600">
+    <header
+        class="flex flex-col justify-between bg-blend-overlay bg-primary/70 min-w-screen max-w-screen min-h-screen md:min-h-screen bg-cover bg-center bg-no-repeat bg-[url('/img/hero2.jpg')]">
+        <!-- start nav -->
+        <nav class="backdrop-brightness-50 relative z-10 shadow-2xl">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false" id="nav-menu-button">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <!--
+                      Icon when menu is closed.
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex flex-shrink-0 items-center">
+                            <img class="h-8 w-auto" src="./img/logo/Joya2.png" alt="Your Company">
+                        </div>
+
+                        <div id="nav-menu" class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">HOME</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:scale-125 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">STORE</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:scale-125 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CONTACT
+                                    US</a>
+                                <a href="#"
+                                    class="text-gray-300 hover:scale-125 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">ABOUT
+                                    US</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                        <!-- Profile dropdown -->
+                        <div class="relative ml-3">
+                            <div>
+                                <button type="button"
+                                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" src="./img/placeholder.png" alt="">
+                                </button>
+                            </div>
+                            <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"
+                                id="user-menu">
+                                <!-- Active: "bg-gray-100", Not Active: "" -->
+                                <a href="#"
+                                    class="transition ease-out duration-800 hover:bg-gray-300 block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                <a href="#"
+                                    class="transition ease-out duration-800 hover:bg-gray-300 block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                                <a href="#"
+                                    class="transition ease-out duration-800 hover:bg-gray-300  block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                            </div>
+
+                        </div>
+                        <!-- cart icon -->
+                        <div class="relative">
+                            <i class="fas fa-shopping-cart text-white text-xl ml-8 hover:cursor-pointer"></i>
+                            <span
+                                class="bg-primary text-white rounded-full px-1.5 absolute -top-2 -right-3 text-xs font-bold">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="nav-menu-mobile">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                        aria-current="page">JOYA</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">STORE</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT
+                        US</a>
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ABOUT
+                        US</a>
+                </div>
+            </div>
+        </nav>
+        <div class="pb-20 flex items-center justify-start  content-center min-w-full min-h-full text-white text-center">
+            <div class="flex flex-col items-center">
+                <span class="m-4 ml-20 text-5xl justify-center block">Shop With a Smile</span>
+                <a role="button" href="#" class="button">Shop
+                    Now</a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- container -->
+    <main>
+
+        <!-- Shipping -->
+        <section class="flex flex-col md:flex-row p-12 items-center mb-20">
+            <img class="rounded-r-full max-w-full md:max-w-96 p-8" src="./img/shipping1.jpg" alt="shipping">
+            <div>
+                <h2 class="text-6xl mb-12">Fastest Shipping</h2>
+                <p>Our store have the fastest shipping you can dream of, you'll have your package within a
+                    <span
+                        class="bg-pink-500 text-xl text-white px-3 py-1.5 rounded-md font-lato font-light italic">day</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section
+            class="bg-gray-200 flex flex-col gap-y-10 min-h-[800px] md:flex-row md:min-h-full justify-between items-center p-12 mb-20">
+            <div clas="text-center flex flex-col justify-center mx-auto">
+                <i class="fas fa-shipping-fast text-9xl text-primary p-6"></i>
+                <h3 class="text-3xl">Fast Shipping</h3>
+            </div>
+
+            <div clas="text-center flex flex-col justify-center mx-auto">
+                <i class="fas fa-money-bill-wave-alt text-9xl text-primary p-6"></i>
+                <h3 class="text-3xl">Money Back</h3>
+            </div>
+            <div clas="text-center flex flex-col justify-center mx-auto">
+                <i class="fas fa-tags text-9xl text-primary p-6 "></i>
+                <h3 class="text-3xl">Huge Discounts</h3>
+            </div>
+        </section>
+
+        <!-- Sign up and get free shipping for 7 days -->
+        <section class="flex flex-col p-12 items-center mb-20">
+            <h2 class="text-3xl text-center">Sign Up now and get
+                <span class="block mt-1 uppercase bg-pink-500 font-lato font-light px-3 py-1.5 text-white rounded-full">
+                    7 days of free shipping
+                </span>
+            </h2>
+            <a href="#" role="button" class="button">
+                Sign up
+            </a>
+        </section>
+
+        <!-- Sign up and get free shipping for 7 days -->
+        <section
+            class="flex flex-col p-12 items-center justify-center mb-20 bg-cover min-h-80 bg-center bg-no-repeat bg-[url('/img/sale.jpg')] bg-blend-overlay bg-primary/100 min-w-screen">
+            <h2 class="text-3xl md:text-6xl text-white text-center">
+                Huge discounts waiting for you
+            </h2>
+        </section>
+
+        <!-- offer section -->
+        <section
+            class="flex flex-col items-center min-h-[1400px] justify-between w-100 md:flex-row md:min-h-96 md:items-start p-12 mb-20 bg-gray-200">
+
+            <div class="card max-w-[80%] lg:max-w-[26%]">
+                <span class="badge">40% OFF</span>
+                <img src="./img/product4.jpg" class="h-48 w-full bg-cover" alt="engagement ring">
+                <div class="p-2 md:p-12">
+                    <h4 class="text-sm md:text-xl font-bold pb-4">Engagement Ring</h4>
+                    <p class="text-gray-500 text-sm max-h-16 overflow-hidden overflow-ellipsis">Your perfect engagement ring. The most perfect ring for any
+                        beautiful couples who are looking.......</p>
+                    <button class="button m-2">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="card max-w-[80%] lg:max-w-[26%]">
+                <span class="badge">43% OFF</span>
+                <img src="./img/product1.jpg" class="h-48 w-full bg-cover" alt="engagement ring">
+                <div class="p-2 md:p-12">
+                    <h4 class="text-sm md:text-xl font-bold pb-4">Engagement Ring</h4>
+                    <p class="text-gray-500 text-sm max-h-16 overflow-hidden overflow-ellipsis">Your perfect engagement ring. The most perfect ring for any
+                        beautiful couples who are looking.......</p>
+                    <button class="button m-2">Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="card max-w-[80%] lg:max-w-[26%]">
+                <span class="badge">50% OFF</span>
+                <img src="./img/product2.jpg" class="h-48 w-full bg-cover" alt="engagement ring">
+                <div class="p-2 md:p-12">
+                    <h4 class="text-sm md:text-xl font-bold pb-4">Engagement Ring</h4>
+                    <p class="text-gray-500 text-sm max-h-16 overflow-hidden overflow-ellipsis">Your perfect engagement ring. The most perfect ring for any
+                        beautiful couples who are looking.......</p>
+                    <button class="button m-2">Add To Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-white w-[100%] min-h-80 bg-primary flex flex-col items-center">
+        <img class="w-24 h-24 object-cover" src="./img/logo/Joya2.png" alt="">
+        <div class="flex flex-row justify-around my-8">
+            <a class="text-2xl border-r-2 border-white px-2 text-gray-400 hover:text-white" href="#">Return Policy</a>
+            <a class="text-2xl border-white ml-1 text-gray-400 hover:text-white" href="#">Shipping Policy</a>
+        </div>
+        <p>© 2024 Joya eCommerce site</p>
+    </footer>
+
+    <script>
+        let profileBtn = document.querySelector("#user-menu-button");
+        let userMenu = document.querySelector("#user-menu");
+        userMenu.style.display = 'none';
+        profileBtn.addEventListener('click', () => {
+            if (userMenu.style.display == 'none')
+                userMenu.style.display = 'inline';
+            else
+                userMenu.style.display = 'none';
+
+
+        });
+
+        let navMenu = document.querySelector("#nav-menu-mobile");
+        let showNavMenuBtn = document.querySelector("#nav-menu-button")
+        navMenu.style.display = 'none';
+        showNavMenuBtn.addEventListener('click', () => {
+            if (navMenu.style.display == 'none')
+                navMenu.style.display = 'block';
+            else
+                navMenu.style.display = 'none';
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+    @apply bg-white shadow-md rounded overflow-hidden relative;
+}
+
+.badge {
+    @apply bg-pink-500 text-white px-4 py-2 rounded-l-full font-lato font-normal absolute right-0 z-20;
+}
+
+.button {
+    @apply bg-primary shadow-inner px-4 py-2 uppercase text-white font-lato font-bold rounded-xl max-w-52 mt-10 transition ease-out duration-300 hover:scale-150 hover:cursor-pointer;
+}
+
+.category {
+    @apply rounded-3xl px-1 py-0.5 border border-primary hover:text-primary hover:cursor-pointer;
+}
+
+
